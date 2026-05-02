@@ -1,7 +1,8 @@
 import { NavLink, Link } from "react-router-dom";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, ShoppingBag, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useCart } from "@/context/CartContext";
 
 const links = [
   { to: "/", label: "Hem" },
@@ -12,6 +13,7 @@ const links = [
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const { totalCount, setOpen: setCartOpen } = useCart();
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-lg">
@@ -39,13 +41,28 @@ export const Navbar = () => {
           ))}
         </ul>
 
-        <button
-          className="md:hidden"
-          onClick={() => setOpen(!open)}
-          aria-label="Öppna meny"
-        >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setCartOpen(true)}
+            aria-label="Öppna varukorg"
+            className="relative rounded-full p-2 text-foreground transition-colors hover:text-primary"
+          >
+            <ShoppingBag className="h-5 w-5" />
+            {totalCount > 0 && (
+              <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-primary px-1 text-[10px] font-bold text-primary-foreground">
+                {totalCount}
+              </span>
+            )}
+          </button>
+
+          <button
+            className="md:hidden"
+            onClick={() => setOpen(!open)}
+            aria-label="Öppna meny"
+          >
+            {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
       </nav>
 
       {open && (
