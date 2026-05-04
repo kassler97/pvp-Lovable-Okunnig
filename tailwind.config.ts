@@ -12,7 +12,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['"Bebas Neue"', "Impact", "sans-serif"],
+        display: ['"Playfair Display"', "Didot", "Georgia", "serif"],
         sans: ["Inter", "system-ui", "sans-serif"],
       },
       colors: {
