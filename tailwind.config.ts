@@ -50,8 +50,8 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         brand: {
-          red: "hsl(var(--brand-red))",
-          glow: "hsl(var(--brand-red-glow))",
+          ink: "hsl(var(--brand-ink))",
+          stone: "hsl(var(--brand-stone))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
