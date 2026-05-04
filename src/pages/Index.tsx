@@ -25,21 +25,21 @@ const Index = () => {
         />
         <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
         <div className="container relative flex h-full flex-col justify-end pb-20">
-          <p className="animate-fade-up text-xs font-semibold uppercase tracking-[0.3em] text-primary">
-            FW26 — Out now
+          <p className="animate-fade-up text-[11px] font-medium uppercase tracking-[0.4em] text-foreground/60">
+            FW26 Collection
           </p>
-          <h1 className="mt-4 max-w-3xl animate-fade-up font-display text-6xl leading-none tracking-tight md:text-8xl">
-            Built for the <span className="text-gradient-brand">streets</span>.
+          <h1 className="mt-6 max-w-4xl animate-fade-up font-display text-5xl font-light leading-[0.95] tracking-tight md:text-7xl lg:text-8xl">
+            Mjukvaror, <em className="italic font-normal">noggrant</em> utvalda.
           </h1>
-          <p className="mt-6 max-w-xl animate-fade-up text-base text-muted-foreground md:text-lg">
-            Vår mörkaste kollektion hittills. Heavyweight fleece, tekniska tyger och en silhuett som inte ber om ursäkt.
+          <p className="mt-8 max-w-xl animate-fade-up text-base font-light leading-relaxed text-foreground/70 md:text-lg">
+            Ett litet sortiment av tidlösa plagg. Material, passform och hantverk som står sig — säsong efter säsong.
           </p>
-          <div className="mt-8 flex animate-fade-up gap-4">
-            <Button asChild size="lg" className="font-semibold uppercase tracking-wider">
-              <Link to="/shop">Shoppa nu <ArrowRight className="ml-2 h-4 w-4" /></Link>
+          <div className="mt-10 flex animate-fade-up gap-3">
+            <Button asChild size="lg" className="rounded-none font-medium uppercase tracking-[0.2em] text-xs h-12 px-8">
+              <Link to="/shop">Utforska <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="font-semibold uppercase tracking-wider">
-              <Link to="/news">Läs mer</Link>
+            <Button asChild size="lg" variant="outline" className="rounded-none border-foreground/30 font-medium uppercase tracking-[0.2em] text-xs h-12 px-8">
+              <Link to="/news">Journal</Link>
             </Button>
           </div>
         </div>
